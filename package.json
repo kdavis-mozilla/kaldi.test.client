@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/kdavis-mozilla/kaldi.test.client#readme",
   "dependencies": {
-    "mic": "^2.1.1"
+    "mic": "https://github.com/mozilla/mic.git"
   }
 }

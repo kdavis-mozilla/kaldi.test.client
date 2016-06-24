@@ -36,11 +36,13 @@ micInputStream.on('resumeComplete', function() {
 
 micInputStream.on('silence', function() {
     console.log("Got SIGNAL silence");
+
     var writerStream = fs.createWriteStream('samples/sample' + index + '.raw');
     writerStream.write(buffer);
     writerStream.end();
-    buffer = new Buffer(0);
+
     index++;
+    buffer = new Buffer(0);
 });
 
 micInputStream.on('processExitComplete', function() {
